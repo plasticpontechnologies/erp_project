@@ -32,7 +32,16 @@ class _DashboardScreenState extends State<DashboardScreen> {
                     height: 200.0,
                     width: screenSize.width,
                   ),
-
+ Container(
+                    color: Color.fromRGBO(221, 51, 21, 1.0),
+                    height: 200.0,
+                    width: screenSize.width,
+                  ),
+                   Container(
+                    color: Color.fromRGBO(221, 51, 21, 1.0),
+                    height: 200.0,
+                    width: screenSize.width,
+                  ),
 
                   Padding(
                     padding: const EdgeInsets.only(top: 120,left: 20,right: 20),

@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_app_erp/TabModule/ChatScreen.dart';
-import 'package:flutter_app_erp/TabModule/SchoolInformation.dart';
-
+import 'ChatScreen.dart';
 import 'FindInstitute.dart';
+import 'SchoolInformation.dart';
 
 class MaintabScreen extends StatefulWidget {
 
@@ -80,6 +79,7 @@ class _MaintabScreenState extends State<MaintabScreen> {
 
     return  WillPopScope(
       //onWillPop: _selectedIndex == 0 ? _onBackPressed : Text(' '),
+      onWillPop: () {  },
       child: Scaffold(
           drawer: Drawer(
             child: _buildDrawer(context),

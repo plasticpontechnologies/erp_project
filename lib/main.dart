@@ -1,13 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_app_erp/TabModule/FindInstitute.dart';
-import 'package:flutter_app_erp/TabModule/MainTabScreen.dart';
+import 'TabModule/MainTabScreen.dart';
 
-void main()
-{
+void main() {
   runApp(MyHomePage());
 }
-
-
 
 class MyHomePage extends StatefulWidget {
   MyHomePage({Key key, this.title}) : super(key: key);
@@ -28,85 +24,78 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-
-
   @override
   Widget build(BuildContext context) {
-
     Size screenSize = MediaQuery.of(context).size;
 
     return Scaffold(
-
-      body: Container(
-        width: screenSize.width,
-        decoration: BoxDecoration(
-          image: DecorationImage(
-            image: AssetImage("assets/bg_image.jpeg"),
-            fit: BoxFit.cover,
-          ),
+        body: Container(
+      width: screenSize.width,
+      decoration: BoxDecoration(
+        image: DecorationImage(
+          image: AssetImage("assets/bg_image.jpeg"),
+          fit: BoxFit.cover,
         ),
-        child: Padding(
-          padding: const EdgeInsets.all(12.0),
-          child: Column(children:
-          [
-            SizedBox(height: 20,),
-
-            Image.asset('assets/logo.png',width: screenSize.width/4,
-            height: 120,),
-
-            Text('MySchool Zero ERP',),
-            SizedBox(height: 60,),
-
-            SizedBox(width: screenSize.width,
+      ),
+      child: Padding(
+        padding: const EdgeInsets.all(12.0),
+        child: Column(
+          children: [
+            SizedBox(
+              height: 20,
+            ),
+            Image.asset(
+              'assets/logo.png',
+              width: screenSize.width / 4,
+              height: 120,
+            ),
+            Text(
+              'MySchool Zero ERP',
+            ),
+            SizedBox(
+              height: 60,
+            ),
+            SizedBox(
+              width: screenSize.width,
               height: 50,
               child: ElevatedButton(
-
                 child: Text('SIGN IN'),
                 style: ButtonStyle(
-
-                  backgroundColor: MaterialStateProperty.all<Color>(
-                     Colors.white
-                  ),
-
-                  foregroundColor: MaterialStateProperty.all<Color>(
-                     Colors.deepOrange
-                  ),
+                  backgroundColor:
+                      MaterialStateProperty.all<Color>(Colors.white),
+                  foregroundColor:
+                      MaterialStateProperty.all<Color>(Colors.deepOrange),
                 ),
-                onPressed: ()
-                {
+                onPressed: () {
                   Navigator.push(
                     context,
                     MaterialPageRoute(builder: (context) => MaintabScreen()),
                   );
-
                 },
               ),
             ),
-            SizedBox(height: 12,),
-            SizedBox(width: screenSize.width,
+            SizedBox(
+              height: 12,
+            ),
+            SizedBox(
+              width: screenSize.width,
               height: 50,
               child: ElevatedButton(
-
                 child: Text('SHOW DEMO'),
                 style: ButtonStyle(
-                  backgroundColor: MaterialStateProperty.all<Color>(
-                      Colors.white
-                  ),
-                  foregroundColor: MaterialStateProperty.all<Color>(
-                      Colors.deepOrange
-                  ),
+                  backgroundColor:
+                      MaterialStateProperty.all<Color>(Colors.white),
+                  foregroundColor:
+                      MaterialStateProperty.all<Color>(Colors.deepOrange),
                 ),
-                onPressed: () {
-                },
+                onPressed: () {},
               ),
             ),
-
-
-
-          ],),
+          ],
         ),
-      )
-      // This trailing comma makes auto-formatting nicer for build methods.
-    );
+      ),
+    )
+        // This trailing comma makes auto-formatting nicer for build methods.
+        );
   }
 }
